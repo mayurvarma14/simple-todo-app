@@ -102,6 +102,12 @@
 .item .text {
   color: #3c3c3c;
   font-size: 18px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.item .text i {
+  color: #3c3c3c;
 }
 .item .date {
   font-size: 16px;
