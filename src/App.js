@@ -21,12 +21,17 @@ const Item = ({ text }) => {
 };
 
 class App extends Component {
-  state = { todos: [{ text: 'Complete ten push-ups' }] };
+  state = {
+    todos: [
+      { text: 'Complete ten push-ups' },
+      { text: 'Interview schedule for Mike' },
+    ],
+  };
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <div class="container">
+          <div className="container">
             <div className="app">
               <div className="header">
                 <div className="header-name">
@@ -39,7 +44,21 @@ class App extends Component {
               </div>
               <List todos={this.state.todos} />
               <div className="footer">
-                <div className="button"></div>
+                <div
+                  className="button"
+                  onClick={() => {
+                    this.setState((prevState) => {
+                      return {
+                        todos: [
+                          ...prevState.todos,
+                          { text: `Todo item ${prevState.todos.length + 1}` },
+                        ],
+                      };
+                    });
+                  }}
+                >
+                  <span>+</span>
+                </div>
               </div>
             </div>
           </div>

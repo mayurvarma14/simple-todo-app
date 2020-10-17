@@ -117,4 +117,19 @@
 
 .footer {
   display: flex;
+  justify-content: center;
+}
+.footer .button {
+  height: 73px;
+  display: flex;
+  background: #424ebd;
+  width: 76px;
+  border-radius: 100px;
+  font-size: 40px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.footer .button span {
+  margin-top: -10px;
 }
